@@ -278,10 +278,17 @@
 
     <section class="contact" id="contact">
         <h2 class="section-title">Let’s Collaborate</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+        <form action="https://formsubmit.co/marvihajdari@arsovia.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+
+            <!-- optional hidden settings -->
+            <input type="hidden" name="_subject" value="New message from Arsovia.com">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="https://arsovia.com/thank-you">
+
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
