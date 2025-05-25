@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arsovia — Strategic Creative Studio" />
+    <title>Arsovia — Timeless Strategy Meets Modern Design</title>
+    <style>
+        :root {
+            --primary: #000000;
+            --background: #ffffff;
+            --foreground: #000000;
+            --text-muted: #666666;
+            --border: #e5e7eb;
+            --radius: 12px;
+            --font-sans: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--foreground);
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5vw;
+            background: #fff;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--foreground);
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--foreground);
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        main {
+            padding-top: 60px;
+        }
+
+        section {
+            padding: 6rem 5vw;
+        }
+
+        .hero {
+            text-align: center;
+            background: #ffffff;
+            padding: 6rem 5vw 8rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+        }
+
+        .hero h1 span {
+            display: block;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            max-width: 720px;
+            margin: 1rem auto 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--foreground);
+            color: white;
+            padding: 0.85rem 2rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #333333;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .services .grid {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+
+        .card {
+            padding: 2rem;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .projects .placeholder {
+            padding: 4rem;
+            border: 2px dashed #ccc;
+            border-radius: var(--radius);
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 1rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--foreground);
+        }
+
+        footer {
+            padding: 3rem 5vw;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1024px) {
+            .hero {
+                padding: 8rem 5vw 6rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            section {
+                padding: 4rem 5vw;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            form input,
+            form textarea {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">Arsovia</div>
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#projects">Work</a>
+        <a href="#about">Studio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+<main>
+    <section class="hero">
+        <h1>
+            <span>We Design Brands</span>
+            <span>With Substance</span>
+        </h1>
+        <p>
+            <span>At Arsovia, we build enduring brand systems</span><br>
+            <span>for founders and teams who value clarity,</span><br>
+            <span>simplicity, and long-term identity.</span>
+        </p>
+        <a class="btn" href="#contact">Start Your Vision</a>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">What We Do</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Strategy</h3>
+                <p>Define your voice, values, and purpose. We shape foundational clarity that scales.</p>
+            </div>
+            <div class="card">
+                <h3>Identity</h3>
+                <p>Minimalist, timeless visual systems tailored to your market and message.</p>
+            </div>
+            <div class="card">
+                <h3>Digital</h3>
+                <p>UX-first, content-aware websites that turn perception into action.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2 class="section-title">Selected Work</h2>
+        <div class="placeholder">
+            <p><strong>In Progress.</strong> Our latest case studies are under wraps.<br />Launch partners will be revealed soon.</p>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2 class="section-title">About Arsovia</h2>
+        <p style="max-width: 720px; margin: 0 auto; text-align: center;">We're not here to decorate — we're here to direct. Arsovia is a strategy-first creative studio focused on lasting impact. We turn ideas into identities, systems into stories, and brands into movements.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">Let’s Collaborate</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <textarea rows="5" placeholder="Tell us about your project..." required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+</main>
+<footer>
+    &copy; 2025 Arsovia — Design for those who lead with intention.
+</footer>
+</body>
+</html>
